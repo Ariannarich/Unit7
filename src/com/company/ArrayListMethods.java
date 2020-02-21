@@ -24,8 +24,7 @@ return list;
         double num =0;
         ArrayList<Double> list = new ArrayList<Double>();
         while (num != 0)
-        {
-            num = input.nextDouble();
+        { num = input.nextDouble();
             list.add(num);
     }
 
