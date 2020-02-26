@@ -28,17 +28,24 @@ public class ArrayListMethods {
         int count = 0;
         double num = input.nextDouble();
         double first = num;
-        count++;
+
+        double last = 0;
         while (num != 0) {
+
             num = input.nextDouble();
             count++;
+            if( num == 0)
+                break;
+
+            last = num;
+
         }
         ArrayList<Double> list = new ArrayList<Double>();
-        double last = num;
+
         double count2 = count;
-        list.set(1, count2);
-        list.set(2, first);
-        list.set(3, last);
+        list.add(0, count2);
+        list.add(1, first);
+        list.add(2, last);
         return list;
     }
 
