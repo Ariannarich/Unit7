@@ -61,25 +61,25 @@ public class ArrayListMethods {
         System.out.println("Enter decimal value 3");
         double val3 = input.nextDouble();
         list.add(val3);
-        list = arrangeList(list);
+
         return list;
     }
 
     public static ArrayList<Double> arrangeList(ArrayList<Double> numbers) {
-        for (int i = numbers.size() - 1; i >= 0; i--) {
-            for (int x = 0; x < numbers.size() - 1; x++)
-            {
-                if (numbers.get(x) > numbers.get(i)) {
-                    numbers.add(x,numbers.get(i));
-                    numbers.remove(numbers.get(i+1));
-                    numbers.add(i +1,numbers.get(x));
-                } else if (x > numbers.get(i) && x > numbers.get(i + 1)) {
-                    numbers.set(i + 1, numbers.get(x));
-                }
+        for (int i = numbers.size() -1 ; i >= 0; i--) {
+    for( double x : numbers) {
+            if (numbers.get(i) < x) {
+                numbers.add((numbers.size() - 1) - i, numbers.get(i));
+                numbers.remove(numbers.size() - 1);
+                break;
+            }
+                else
+                break;
             }
         }
         return numbers;
     }
 }
+
 
 
