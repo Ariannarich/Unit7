@@ -14,8 +14,8 @@ public class ArrayListMethods {
         list.add(12);
         list.add(-1);
         System.out.println(list);
-        list.add(2,10);
-        list.set(1,9);
+        list.add(2, 10);
+        list.set(1, 9);
         System.out.println(list);
         list.remove(4);
         return list;
@@ -34,7 +34,7 @@ public class ArrayListMethods {
 
             num = input.nextDouble();
             count++;
-            if( num == 0)
+            if (num == 0)
                 break;
 
             last = num;
@@ -48,7 +48,6 @@ public class ArrayListMethods {
         list.add(2, last);
         return list;
     }
-
 
 
     public static ArrayList<Double> getNumbers() {
@@ -67,14 +66,20 @@ public class ArrayListMethods {
     }
 
     public static ArrayList<Double> arrangeList(ArrayList<Double> numbers) {
-        int count = 1;
-        for (double x : numbers) {
-            if (x > numbers.get(count)) {
-                numbers.set(count, x);
-
+        for (int i = numbers.size() - 1; i >= 0; i--) {
+            for (int x = 0; x < numbers.size() - 1; x++)
+            {
+                if (numbers.get(x) > numbers.get(i)) {
+                    numbers.add(x,numbers.get(i));
+                    numbers.remove(numbers.get(i+1));
+                    numbers.add(i +1,numbers.get(x));
+                } else if (x > numbers.get(i) && x > numbers.get(i + 1)) {
+                    numbers.set(i + 1, numbers.get(x));
+                }
             }
         }
         return numbers;
     }
 }
+
 
