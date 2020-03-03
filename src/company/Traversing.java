@@ -1,11 +1,10 @@
-package com.company;
+package company;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Traversing
-{
+public class Traversing {
     public static Scanner input = new Scanner(System.in);
 
     public static ArrayList<String> getStates() {
@@ -26,27 +25,32 @@ public class Traversing
         }
         return list;
     }
-        public static String createList(ArrayList<String> states)
-        { String state = "";
-            for(int count=0;count< states.size(); count++) {
 
-                state += states.get(count);
-                if (count == states.size()-1)
-                    {
-                        break;
-                    }
-                else
-                       state += " -> ";
-            }
-            return state;
+    public static String createList(ArrayList<String> states) {
+        String state = "";
+        for (int count = 0; count < states.size(); count++) {
 
-            }
+            state += states.get(count);
+            if (count == states.size() - 1) {
+                break;
+            } else
+                state += " -> ";
+        }
+        return state;
+
+    }
 
 
-    public static ArrayList<Integer> largestAndSmallest() throws IOException
-    {
+    public static ArrayList<Integer> largestAndSmallest() throws IOException {
         ArrayList<Integer> numbers = new ArrayList<>();
+        for (int i = numbers.size() - 1; i > 0; i--)
+            for (int x : numbers) {
+                if (x > numbers.get(i)) {
+                    int max = x;
+                }
 
+            }
+        return numbers;
     }
 }
 
