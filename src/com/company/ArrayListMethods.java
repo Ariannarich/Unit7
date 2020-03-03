@@ -7,7 +7,7 @@ public class ArrayListMethods {
     public static Scanner input = new Scanner(System.in);
 
     public static ArrayList<Integer> numberList() {
-        ArrayList<Integer> list = new ArrayList<Integer>();
+      ArrayList<Integer> list = new ArrayList<Integer>();
         list.add(0);
         list.add(-5);
         list.add(7);
@@ -44,6 +44,7 @@ public class ArrayListMethods {
 
         double count2 = count;
         list.add(0, count2);
+
         list.add(1, first);
         list.add(2, last);
         return list;
@@ -72,7 +73,7 @@ public class ArrayListMethods {
                 if (numbers.get(x) > numbers.get(i)) {
                     numbers.add(x,numbers.get(i));
                     numbers.remove(numbers.get(i+1));
-                    numbers.add(i +1,numbers.get(x));
+                    numbers.add(i +1 ,numbers.get(x));
                 } else if (x > numbers.get(i) && x > numbers.get(i + 1)) {
                     numbers.set(i + 1, numbers.get(x));
                 }
