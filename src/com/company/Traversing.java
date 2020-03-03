@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -40,6 +41,13 @@ public class Traversing
             return state;
 
             }
-        }
+
+
+    public static ArrayList<Integer> largestAndSmallest() throws IOException
+    {
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+    }
+}
 
 
