@@ -1,6 +1,6 @@
 package company;
 
-import java.awt.*;
+
 
 public class Rectangle {
     private double length;
