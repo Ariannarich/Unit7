@@ -45,7 +45,7 @@ public class Traversing {
     public static ArrayList<Integer> largestAndSmallest() throws IOException {
         Scanner input = new Scanner(new File("file.txt"));
         ArrayList<Integer> numbers = new ArrayList<>();
-        int max = 0;
+
        while(input.hasNext())
        {
            numbers.add(input.nextInt());
