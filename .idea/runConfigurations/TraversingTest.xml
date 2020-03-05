@@ -1,0 +1,22 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="TraversingTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+    <module name="Unit7" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="company.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="ALTERNATIVE_JRE_PATH" value="$APPLICATION_HOME_DIR$/jbr" />
+    <option name="PACKAGE_NAME" value="company" />
+    <option name="MAIN_CLASS_NAME" value="company.TraversingTest" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="class" />
+    <option name="PARAMETERS" value="" />
+    <option name="INPUT_FILE" value="$PROJECT_DIR$/src/file.txt" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

@@ -11,7 +11,7 @@ public class Traversing {
     public static ArrayList<String> getStates() {
 
         ArrayList<String> list = new ArrayList<String>();
-        for (int i = 1; i < list.size(); i++) {
+        for (int i = list.size(); i >=0 ; i--) {
             System.out.println("Next state or \"Stop\":");
             String word = input.next();
             list.add(word);
@@ -22,7 +22,7 @@ public class Traversing {
                     list.add(word);
                 }
             }
-            System.out.print(createList(list));
+
         }
         return list;
     }
@@ -43,7 +43,7 @@ public class Traversing {
 
 
     public static ArrayList<Integer> largestAndSmallest() throws IOException {
-        Scanner input = new Scanner(new File("company/data.txt"));
+        Scanner input = new Scanner(new File("file.txt"));
         ArrayList<Integer> numbers = new ArrayList<>();
         int max = 0;
        while(input.hasNext())

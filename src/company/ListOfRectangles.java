@@ -18,12 +18,20 @@ public class ListOfRectangles {
     }
         return rect;
     }
-    public static double findAverage(ArrayList<Rectangle> rectangles) //method is double
+    public static double findAverage(ArrayList<Rectangle> rectangles)
     {
-return 0.0;
+       double total = 0;
+       int count = 0;
+        for(Rectangle x: rectangles)
+        {  total+=x.area();
+            count++;
+        }
+        double area = total/count;
+return area;
     }
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws IOException {
+        ArrayList<Rectangle> rect = getRectangles();
 
+    System.out.println((findAverage(rect)));
     }
 }
