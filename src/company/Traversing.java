@@ -1,5 +1,6 @@
 package company;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -42,14 +43,22 @@ public class Traversing {
 
 
     public static ArrayList<Integer> largestAndSmallest() throws IOException {
+        Scanner input = new Scanner(new File("company/data.txt"));
         ArrayList<Integer> numbers = new ArrayList<>();
-        for (int i = numbers.size() - 1; i > 0; i--)
-            for (int x : numbers) {
-                if (x > numbers.get(i)) {
-                    int max = x;
-                }
-
-            }
+        int max = 0;
+       while(input.hasNext())
+       {
+           numbers.add(input.nextInt());
+       }
+       for(int i = numbers.size() -2; i >=0; i--)
+       {
+           if (numbers. get(i) > numbers.get(i+1))
+           {
+               int temp = numbers.get(i);
+               numbers.remove(numbers.get(i));
+               numbers.add(temp);
+           }
+       }
         return numbers;
     }
 }
