@@ -14,7 +14,8 @@
     <option name="METHOD_NAME" value="" />
     <option name="TEST_OBJECT" value="class" />
     <option name="PARAMETERS" value="" />
-    <option name="INPUT_FILE" value="$PROJECT_DIR$/src/file.txt" />
+    <option name="REDIRECT_INPUT" value="true" />
+    <option name="INPUT_FILE" value="$PROJECT_DIR$/src/traversingData.txt" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
