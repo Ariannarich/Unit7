@@ -19,7 +19,7 @@ public class TraversingTest {
         test.add("Pennsylvania");
         test.add("Vermont");
 
-        assertEquals(test, Traversing.getStates());
+         assertEquals(test, Traversing.getStates());
     }
 
     @Test

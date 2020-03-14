@@ -21,12 +21,19 @@ public class Algorithms {
         }
         ArrayList<Integer> list3 = new ArrayList<>();
         int count = 0;
-        while (list1.get(count) == list2.get(count)) {
-            list3.add(list2.get(count));
+        for (int i = list2.size() - 1; i > 0; i--) {
+            if (list1.get(count).equals(list2.get(i))) {
+                list3.add(list2.get(i));
+            }
             count++;
         }
+
+
         return list3;
-    }
+            }
+
+
+
 
     public static ArrayList<String> fileDuplicatesTwo() throws IOException {
 
