@@ -9,27 +9,27 @@ public class Algorithms {
 
     public static ArrayList<Integer> fileDuplicates() throws IOException {
         Scanner input = new Scanner(new File("file1.txt"));
-        ArrayList<Integer> list1 = new ArrayList<>();
+        ArrayList<Integer> numbers1 = new ArrayList<>();
 
         while (input.hasNext()) {
-            list1.add(input.nextInt());
+            numbers1.add(input.nextInt());
         }
-        ArrayList<Integer> list2 = new ArrayList<>();
+        ArrayList<Integer> numbers2 = new ArrayList<>();
         Scanner input2 = new Scanner(new File("file2.txt"));
         while (input2.hasNext()) {
-            list2.add(input2.nextInt());
+            numbers2.add(input2.nextInt());
         }
-        ArrayList<Integer> list3 = new ArrayList<>();
-        int count = 0;
-        for (int i = list2.size() - 1; i > 0; i--) {
-            if (list1.get(count).equals(list2.get(i))) {
-                list3.add(list2.get(i));
+        ArrayList<Integer> numbers3 = new ArrayList<>();
+    for (int x =0 ; x<numbers1.size();x++) {
+        for (int i : numbers2)
+            if (i == (numbers1.get(x))) {
+                numbers3.add(i);
             }
-            count++;
-        }
+    }
 
 
-        return list3;
+
+        return numbers3;
             }
 
 
@@ -38,23 +38,30 @@ public class Algorithms {
     public static ArrayList<String> fileDuplicatesTwo() throws IOException {
 
         Scanner input = new Scanner(new File("names.txt"));
-        ArrayList<String> list = new ArrayList<>();
+        ArrayList<String> numbers = new ArrayList<>();
 
         while (input.hasNext()) {
-            list.add(input.next());
+            numbers.add(input.next());
         }
-        for(int y = 0; y< list.size() -1; y++)
-        {
-        for (int x = list.size() -1; x >= 0; x--) {
-            if (list.get(x).equals(list.get(y))) {
-                list.remove(x);
+
+
+        for( int i=0;i <numbers.size(); i++) {
+            for(int x = 1; x < numbers.size(); x++) {
+                if(i >= numbers.size() || x + 1 >= numbers.size() )
+            {
+               break;
+
+            }
+                if (numbers.get(i).equals(numbers.get(x+1)) && x+1 != i)
+                {
+                    numbers.remove(x+1);
+                }
+
             }
         }
-        }
-        return list;
 
+        return numbers;
     }
-
     public static ArrayList<Integer> orderedList()throws IOException
     {
 
@@ -65,13 +72,15 @@ public class Algorithms {
         {
             numbers.add(input.nextInt());
         }
-        for(int i = numbers.size() -2; i >=0; i--)
-        {
-            if (numbers. get(i) > numbers.get(i+1))
-            {
-                int temp = numbers.get(i);
-                numbers.remove(numbers.get(i));
-                numbers.add(temp);
+        for(int i = 0; i < numbers.size(); i++) {
+            for (int x = 0; x < numbers.size(); x++) {
+               if( x + 1 >= numbers.size() ){
+                   break;
+               }
+                else if (numbers.get(x) > numbers.get(x + 1)) {
+                    numbers.add(x+2,numbers.get(x));
+                    numbers.remove(x);
+                }
             }
         }
         return numbers;
